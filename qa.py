@@ -5,8 +5,8 @@ from langchain.chains import VectorDBQAWithSourcesChain
 import pickle
 import argparse
 
-parser = argparse.ArgumentParser(description='Ask a question to the notion DB.')
-parser.add_argument('question', type=str, help='The question to ask the notion DB')
+parser = argparse.ArgumentParser(description='Ask a question to the Salling FAQ.')
+parser.add_argument('question', type=str, help='The question to ask the Salling FAQ')
 args = parser.parse_args()
 
 # Load the LangChain.
