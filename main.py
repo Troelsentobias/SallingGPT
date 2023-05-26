@@ -18,8 +18,8 @@ chain = VectorDBQAWithSourcesChain.from_llm(llm=OpenAI(temperature=0), vectorsto
 
 
 # From here down is all the StreamLit UI.
-st.set_page_config(page_title="Capturis knowledge universe", page_icon=":robot:")
-st.header("Capturis knowledge universe")
+st.set_page_config(page_title="Salling Group FAQ❓", page_icon=":robot:")
+st.header("Salling Group FAQ❓")
 
 if "generated" not in st.session_state:
     st.session_state["generated"] = []
@@ -29,7 +29,7 @@ if "past" not in st.session_state:
 
 
 def get_text():
-    input_text = st.text_input("You: ", "Hvordan øger jeg kundetilfredsheden?", key="input")
+    input_text = st.text_input("You: ", "Hvordan fungerer click and collect?", key="input")
     return input_text
 
 
