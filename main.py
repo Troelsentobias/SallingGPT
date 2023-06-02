@@ -36,7 +36,7 @@ def get_text():
 user_input = get_text()
 
 if user_input:
-    result = chain({"question": user_input})
+    result = chain({"question": user_input + " Please reply in danish"})
     output = f"Answer: {result['answer']}\nSources: {result['sources']}"
 
     st.session_state.past.append(user_input)
