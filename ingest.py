@@ -28,10 +28,8 @@ for i, d in enumerate(data):
     docs.extend(splits)
     metadatas.extend([{"source": sources[i]}] * len(splits))
 
-openai_api_key = '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'
-
 # Here we create a vector store from the documents and save it to disk.
-store = FAISS.from_texts(docs, OpenAIEmbeddings(openai_api_key='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'), metadatas=metadatas)
+store = FAISS.from_texts(docs, OpenAIEmbeddings(), metadatas=metadatas)
 faiss.write_index(store.index, "docs.index")
 store.index = None
 with open("faiss_store.pkl", "wb") as f:
